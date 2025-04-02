@@ -1,0 +1,87 @@
+{
+  "pregunta": "¿Es un ser vivo?",
+  "si": {
+    "pregunta": "¿Es un animal?",
+    "si": {
+      "pregunta": "¿Vuela?",
+      "si": {
+        "pregunta": "¿Tiene plumas?",
+        "si": {
+          "adivinanza": "Un loro"
+        },
+        "no": {
+          "adivinanza": "Un murciélago"
+        }
+      },
+      "no": {
+        "pregunta": "¿Es doméstico?",
+        "si": {
+          "adivinanza": "Un perro"
+        },
+        "no": {
+          "pregunta": "¿Tiene melena?",
+          "si": {
+            "adivinanza": "león"
+          },
+          "no": {
+            "adivinanza": "Un tigre"
+          }
+        }
+      }
+    },
+    "no": {
+      "pregunta": "¿Tiene raíces?",
+      "si": {
+        "pregunta": "¿Da frutos comestibles?",
+        "si": {
+          "adivinanza": "Un manzano"
+        },
+        "no": {
+          "adivinanza": "Un pino"
+        }
+      },
+      "no": {
+        "adivinanza": "Un hongo"
+      }
+    }
+  },
+  "no": {
+    "pregunta": "¿Se puede usar para comunicarse?",
+    "si": {
+      "pregunta": "¿Tiene pantalla?",
+      "si": {
+        "adivinanza": "Un teléfono móvil"
+      },
+      "no": {
+        "adivinanza": "Un walkie-talkie"
+      }
+    },
+    "no": {
+      "pregunta": "¿Es un alimento?",
+      "si": {
+        "pregunta": "¿Es dulce?",
+        "si": {
+          "adivinanza": "Un pastel"
+        },
+        "no": {
+          "adivinanza": "Una pizza"
+        }
+      },
+      "no": {
+        "pregunta": "¿Tiene ruedas?",
+        "si": {
+          "pregunta": "¿Se usa para transporte personal?",
+          "si": {
+            "adivinanza": "Una bicicleta"
+          },
+          "no": {
+            "adivinanza": "Un camión"
+          }
+        },
+        "no": {
+          "adivinanza": "Una roca"
+        }
+      }
+    }
+  }
+}

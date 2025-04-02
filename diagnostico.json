@@ -1,0 +1,93 @@
+{
+    "pregunta": "¿Tiene fiebre?",
+    "si": {
+        "pregunta": "¿Tiene tos seca?",
+        "si": {
+            "pregunta": "¿Tiene dificultad para respirar?",
+            "si": {
+                "diagnostico": "Covid-19"
+            },
+            "no": {
+                "pregunta": "¿Tiene dolor muscular?",
+                "si": {
+                    "diagnostico": "Influenza"
+                },
+                "no": {
+                    "diagnostico": "Gripe leve"
+                }
+            }
+        },
+        "no": {
+            "pregunta": "¿Tiene dolor de garganta?",
+            "si": {
+                "pregunta": "¿Tiene ganglios inflamados?",
+                "si": {
+                    "diagnostico": "Faringitis"
+                },
+                "no": {
+                    "diagnostico": "Resfriado común"
+                }
+            },
+            "no": {
+                "pregunta": "¿Tiene sarpullido?",
+                "si": {
+                    "diagnostico": "Sarampión"
+                },
+                "no": {
+                    "diagnostico": "Fiebre sin causa conocida"
+                }
+            }
+        }
+    },
+    "no": {
+        "pregunta": "¿Tiene estornudos?",
+        "si": {
+            "pregunta": "¿Tiene ojos llorosos?",
+            "si": {
+                "pregunta": "¿Es temporada de polen?",
+                "si": {
+                    "diagnostico": "Alergia estacional"
+                },
+                "no": {
+                    "diagnostico": "Irritación ocular"
+                }
+            },
+            "no": {
+                "pregunta": "¿Tiene mucosidad clara?",
+                "si": {
+                    "diagnostico": "Rinitis alérgica"
+                },
+                "no": {
+                    "diagnostico": "Resfriado leve"
+                }
+            }
+        },
+        "no": {
+            "pregunta": "¿Siente fatiga constante?",
+            "si": {
+                "pregunta": "¿Tiene dificultad para concentrarse?",
+                "si": {
+                    "diagnostico": "Fatiga crónica"
+                },
+                "no": {
+                    "diagnostico": "Falta de sueño"
+                }
+            },
+            "no": {
+                "pregunta": "¿Tiene dolor abdominal?",
+                "si": {
+                    "pregunta": "¿Ha tenido diarrea?",
+                    "si": {
+                        "diagnostico": "Gastroenteritis"
+                    },
+                    "no": {
+                        "diagnostico": "Indigestión"
+                    }
+                },
+                "no": {
+                    "diagnostico": "Sin diagnóstico claro"
+                }
+            }
+        }
+    }
+}
