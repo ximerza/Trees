@@ -89,18 +89,6 @@ class BinarySearchTree[T]:
         return self._size
 
     @property
-    def height(self) -> int:
-        if self.root is None:
-            return 0
-
-        return self._height(self.root)
-
-    def _height(self, node: Node) -> int:
-        if node is None:
-            return 0
-        left_height = self._height(node.left)
-        right_height = self._height(node.right)
-        return 1 + max(left_height, right_height)
 
     def __str__(self) -> str:
         """
@@ -120,35 +108,31 @@ class BinarySearchTree[T]:
         return result
 
     def inorder(self) -> list[T]:
-        result = []
-        self._inorder(self.root, result)
-        return result
+        return self._inorder(self.root)
 
-    def _inorder(self, node: Node, result: list[T]):
-        if node is not None:
-            self._inorder(node.left, result)
-            result.append(node.data)
-            self._inorder(node.right, result)
+    def _inorder(self, node: Node):
+        if node is None:
+            return []
+
+        return self._inorder(node.left) + [node.data] + self._inorder(node.right)
 
     def preorder(self) -> list[T]:
-        result = []
-        self._preorder(self.root, result)
-        return result
+        return self._preorder(self.root)
 
-    def _preorder(self, node: Node, result: list[T]):
-        if node is not None:
-            result.append(node.data)
-            self._preorder(node.left, result)
-            self._preorder(node.right, result)
+
+    def _preorder(self, node: Node):
+        if node is None:
+            return []
+
+        return [node.data] +self._preorder(node.left) + self._preorder(node.right)
 
     def postorder(self) -> list[T]:
-        result = []
-        self._postorder(self.root, result)
-        return result
+        return self._postorder(self.root)
 
-    def _postorder(self, node: Node, result: list[T]):
-        if node is not None:
-            self._postorder(node.left, result)
-            self._postorder(node.right, result)
-            result.append(node.data)
+
+    def _postorder(self, node: Node):
+        if node is None:
+            return []
+
+        return [node.data] + self._postorder(node.left) + self._postorder(node.right)
 
