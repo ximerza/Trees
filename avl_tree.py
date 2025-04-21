@@ -15,7 +15,7 @@ class AVLSearchTree[T](BinarySearchTree):
 
     @override
     def _insert(self, node: Node, data: T) -> Node[T]:
-        if node is Node:
+        if node is None:
             return Node(data)
 
         if self.key(data) < self.key(node.data):
@@ -24,6 +24,25 @@ class AVLSearchTree[T](BinarySearchTree):
             node.right = self._insert(node.right, data)
 
         return self._balance(node)
+
+    def _rotate_left(self, x: Node[T]) -> Node[T]:
+        y = x.right
+        z = y.left
+
+        y.left = x
+        x.right = z
+
+        return y
+
+    def _rotate_right(self, x: Node[T]) -> Node[T]:
+        y = x.left
+        z = y.right
+
+        y.right = x
+        x.left = z
+
+        return y
+
 
     def _balance(self, node:Node[T]) -> Node[T]:
         balance_factor = self._get_balance(node)
